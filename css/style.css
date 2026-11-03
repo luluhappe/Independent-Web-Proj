@@ -1,0 +1,78 @@
+/* Move down content because we have a fixed navbar at 35px tall */ 
+body { padding-top:35px;}
+.btn-primary {background-color:pink;}
+
+body {
+    background: bisque;
+    font-family: Arial, sans-serif;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 15px;
+}
+
+.card {
+    display: block;
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    animation: pop 0.6s backwards;
+}
+
+.card:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+.card:has(input:checked) {
+    background: lavender;
+    border-color: purple;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        animation: none;
+    }
+}
+button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: turquoise;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);}

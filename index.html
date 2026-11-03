@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Truths and a Lie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Lulu's Truth and Lie Game</h1>
+    <hr>
+
+    <h2>Introductions</h2>
+
+    <form id="name-form">
+        <label for="fname">First Name:</label><br>
+        <input type="text" name="fname" id="fname" required><br><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="lname" id="lname" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" name="age" id="age" min="1" required><br>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <p id="greet" aria-live="polite">Welcome!</p>
+
+    <h2>Warm Up Trivia Question</h2>
+    <p>Which food is famous for lasting a very long time without spoiling?</p>
+
+    <form id="trivia-form">
+        <label class="card">
+            <input type="radio" name="trivia1" id="chocolate">
+            Dark Chocolate
+        </label>
+
+        <label class="card">
+            <input type="radio" name="trivia1" id="tuna">
+            Tuna
+        </label>
+
+        <label class="card">
+            <input type="radio" name="trivia1" id="honey">
+            Honey
+        </label>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <p id="trivia1-answer" aria-live="polite"></p>
+
+    <hr>
+
+    <h2>Two Truths and a Lie</h2>
+    <p>Two statements are true. Select the lie!</p>
+
+    <form id="lie-form">
+        <label class="card">
+            <input type="radio" name="lie" id="statement1">
+            My great-great-grandpa wrote the Swedish national anthem.
+        </label>
+
+        <label class="card">
+            <input type="radio" name="lie" id="statement2">
+            I am a quarter Polish.
+        </label>
+
+        <label class="card">
+            <input type="radio" name="lie" id="statement3">
+            I can speak Japanese.
+        </label>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <p id="lie-answer" aria-live="polite"></p>
+
+    <hr>
+
+    <h2>Extra Challenge: Select Two Truths</h2>
+    <p>Select both true statements!</p>
+
+    <form id="truth-form">
+        <label class="card">
+            <input type="checkbox" name="truth" id="truth1">
+            My favorite drink is slushies.
+        </label>
+
+        <label class="card">
+            <input type="checkbox" name="truth" id="truth2">
+            I used to have a house in South Africa.
+        </label>
+
+        <label class="card">
+            <input type="checkbox" name="truth" id="truth3">
+            I like peas.
+        </label>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <p id="truth-answer" aria-live="polite"></p>
+
+    <script src="truth.js"></script>
+</body>
+</html>
